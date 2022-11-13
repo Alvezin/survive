@@ -1,24 +1,6 @@
-# survive
+# SURVIVE
 
-## Project setup
-```
-npm install
-```
+## Sobre
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Survive é um jogo no estilo RPG que estou tentando criar com vue.js 3.
+Ainda em desenvolvimento.
