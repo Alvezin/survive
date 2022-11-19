@@ -21,22 +21,22 @@ export default {
     const menuOptions = [
       {
         id: 1,
-        text: "Novo Jogo",
+        text: "New Game",
         pathLink: "/",
       },
       {
         id: 2,
-        text: "Carregar",
+        text: "Load",
         pathLink: "/load",
       },
       {
         id: 3,
-        text: "Sobre",
+        text: "About",
         pathLink: "/about",
       },
       {
         id: 4,
-        text: "Créditos",
+        text: "Credits",
         pathLink: "/credits",
       },
     ];
@@ -51,10 +51,6 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/variaveis.scss";
 
-@font-face {
-  font-family: "evil Dead";
-  src: url("@/assets/fonts/EVILDEAD.TTF") format("truetype");
-}
 .menu {
   display: flex;
   flex-direction: column;

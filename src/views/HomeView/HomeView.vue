@@ -1,9 +1,9 @@
 <template>
   <section @click="playSound" class="view">
     <menu-component />
-    <audio id="audio" @ended="playSound">
+    <!-- <audio id="audio" @ended="playSound">
       <source src="@/assets/sounds/Unnatural.mp3" type="audio/mpeg" />
-    </audio>
+    </audio> -->
   </section>
 </template>
 

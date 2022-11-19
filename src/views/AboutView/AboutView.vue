@@ -4,7 +4,7 @@
       <h3>About</h3>
       <router-link class="router-link" to="/">X</router-link>
     </div>
-    <section>
+    <section id="scrollbar">
       <p>
         Survive is a horror game, but different from 3D environment, here
         excerpts of stories are presented and it remains for you to choose the
@@ -37,10 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/scss/variaveis.scss";
-@font-face {
-  font-family: "normal-text";
-  src: url("@/assets/fonts/Game\ Space\ Academy.otf") format("truetype");
-}
+
 .about-menu {
   display: flex;
   flex-direction: row;
@@ -50,9 +47,9 @@ p {
   margin-bottom: 10px;
   line-height: 30px;
   text-align: justify;
-  text-indent: 30px;
 }
 div {
+  text-indent: 30px;
   color: $white-smoke;
   font-family: "normal-text";
   width: 600px;

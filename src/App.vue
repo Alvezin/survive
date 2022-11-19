@@ -18,6 +18,16 @@ export default {
 </script>
 <style lang="scss">
 @import "@/scss/variaveis.scss";
+@import "@/scss/scrollbar.scss";
+@include scrollbar;
+@font-face {
+  font-family: "evil Dead";
+  src: url("@/assets/fonts/EVILDEAD.TTF") format("truetype");
+}
+@font-face {
+  font-family: "normal-text";
+  src: url("@/assets/fonts/Game\ Space\ Academy.otf") format("truetype");
+}
 * {
   padding: 0;
   margin: 0;
