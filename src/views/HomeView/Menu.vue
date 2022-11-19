@@ -59,5 +59,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.082);
 }
 </style>

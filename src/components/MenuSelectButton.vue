@@ -4,9 +4,19 @@
       :to="pathLink"
       class="button"
       @mouseover="playHoverEffect()"
+      @mouseout="state.showIcon = false"
       @click="playSelectEffect()"
-      >{{ buttonTxt }}</router-link
     >
+      <p>
+        {{ buttonTxt }}
+      </p>
+      <img
+        src="@/assets/iconSet/144.png"
+        alt="set"
+        class="icon-img"
+        v-show="state.showIcon"
+      />
+    </router-link>
     <audio id="effectAudio">
       <source :src="state.audioSrc" :type="state.audioType" />
     </audio>
@@ -27,8 +37,10 @@ export default {
     const state = reactive({
       audioSrc: null,
       audioType: null,
+      showIcon: false,
     });
     async function playHoverEffect() {
+      state.showIcon = true;
       const audio = document.getElementById("effectAudio");
       const audioSrc = AudioService.getAudioByName("menu-selection");
       state.audioSrc = audioSrc.src;
@@ -57,7 +69,10 @@ export default {
 
 <style scoped lang="scss">
 @import "@/scss/variaveis.scss";
-
+div {
+  padding: 20px 30px;
+  height: 100%;
+}
 .button {
   font-family: "evil Dead";
   text-transform: uppercase;
@@ -67,12 +82,19 @@ export default {
   color: $white-smoke;
   transition: 0.3s;
   font-size: large;
-  padding: 10px 30px;
   text-decoration: none;
+  width: 100%;
+  display: block;
   cursor: pointer;
   &:hover {
     color: $strong-red;
     text-shadow: 1px 0px 2px red;
   }
+}
+.icon-img {
+  width: 20px;
+}
+.img-container {
+  width: 20px;
 }
 </style>
