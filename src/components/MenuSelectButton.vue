@@ -39,23 +39,23 @@ export default {
       audioType: null,
       showIcon: false,
     });
-    async function playHoverEffect() {
+    function playHoverEffect() {
       state.showIcon = true;
-      const audio = document.getElementById("effectAudio");
       const audioSrc = AudioService.getAudioByName("menu-selection");
+      const audio = document.getElementById("effectAudio");
       state.audioSrc = audioSrc.src;
       state.audioType = audioSrc.type;
       audio.currentTime = 0.0;
-      await audio.load();
+      audio.load();
       audio.play();
     }
-    async function playSelectEffect() {
+    function playSelectEffect() {
       const audio = document.getElementById("effectAudio");
       const audioSrc = AudioService.getAudioByName("menu-selected");
       state.audioSrc = audioSrc.src;
       state.audioType = audioSrc.type;
       audio.currentTime = 0.0;
-      await audio.load();
+      audio.load();
       audio.play();
     }
     return {
